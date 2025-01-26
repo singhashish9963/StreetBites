@@ -1,0 +1,39 @@
+ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.detail{
+    width: 50px;
+    background-color: aqua;
+    text-align: center;
+    font-weight: 600;
+    padding: 10px;
+    margin: 10px;
+
+}
+.booknow{
+    width: 100px;
+    background-color: rgb(13, 240, 6);
+    text-align: center;
+    font-weight: 600;
+    padding: 5px;
+    margin: 10px;
+}
+.fav{
+    font-weight: 600;
+    background-color: blueviolet;
+    color: white;
+    width: 170px;
+    padding: 5px;
+}
+.edit{
+    border: 2px solid black;
+    margin-bottom: 5px;
+    display: block;
+    text-align: center;
+    width: 100px;
+    padding: 2px;
+    background-color: aqua;
+    border-radius: 20px;
+}

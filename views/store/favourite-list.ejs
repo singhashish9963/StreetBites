@@ -26,6 +26,7 @@
                             <span class="ml-1 text-gray-700"><%= resturant.rating %>/5</span>
                         </div>
                     </div>
+                    <form action="/favourites/delete/<%=resturant._id%>" method="POST"><button class="fav">remove from favourite</button></form>
                 </div>
             </li>
         <% }) %>

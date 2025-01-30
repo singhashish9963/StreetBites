@@ -21,9 +21,11 @@
                     </div>
                 </div>
                 <form action="/favourites" method="POST">
-                    <input type="hidden" name="resturantId" value="<%= resturant.id %>">
-                    <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300">Add to Favourites</button>
-                </form>
+                    <button type="submit" class="bg-green-300 p-2 hover:bg-green-500">
+                      Add to Favourite
+                    </button>
+                    <input type="hidden" name="id" value="<%= resturant._id %>" />
+                  </form>
             </div>
         </div>
     </main>

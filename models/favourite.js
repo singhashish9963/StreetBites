@@ -6,7 +6,7 @@ module.exports=class Favourite{
     
 save(){
     const db=getdb();
-    return db.collection('favourites').findOne({resturantid:this.id}).then(existingfav=>{
+    return db.collection('favourites').findOne({resturantid:this.resturantid}).then(existingfav=>{
         if(!existingfav){
             return db.collection('favourites').insertOne(this)
         }

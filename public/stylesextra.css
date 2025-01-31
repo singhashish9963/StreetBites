@@ -22,7 +22,7 @@ ul{
 }
 .fav{
     font-weight: 600;
-    background-color: blueviolet;
+    background-color:#e53e3e;
     color: white;
     width: 170px;
     padding: 5px;
@@ -130,8 +130,8 @@ img {
     color: #4a5568;
 }
 .box{
-    width: 25%;
-    height: 25%;
+    width: 28%;
+    height: 28%;
 }
 .flex1{
     display: flex;
@@ -290,4 +290,87 @@ img {
 
 .duration-300 {
     transition-duration: 0.3s;
+}
+.space-y-4 > * + * {
+    margin-top: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.text-gray-800 {
+    color: #2d3748;
+}
+
+.bg-red-500 {
+    background-color: #f56565;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.hover\:bg-red-600:hover {
+    background-color: #e53e3e;
+}
+
+.transition {
+    transition: all 0.3s ease-in-out;
+}
+
+.duration-300 {
+    transition-duration: 0.3s;
+}
+.margin{
+    margin: 20px;
+}
+.imageforitem{
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+
+}
+.itemsarr{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    
+}
+.itemheight{
+    height: 80px;
+}
+.text-yellow-500{
+    --tw-text-opacity: 1;
+    color: rgb(234 179 8 / var(--tw-text-opacity))
 }

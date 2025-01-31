@@ -71,3 +71,15 @@ if(!resturant){
     
 }}) 
 }
+exports.getresturantitems=(req,res,next)=>{
+    const resturantid=req.params.resturantid;
+    Resturant.findbyid(resturantid).then(resturant=>{
+ if(!resturant){
+     console.log("resturant not found")
+     res.redirect("/")
+ } else{
+     res.render('store/resturant-items',{pagetitle:'resturant detail',resturant:resturant})
+     
+     
+ }}) 
+ }

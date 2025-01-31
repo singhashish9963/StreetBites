@@ -26,8 +26,8 @@
                             <span class="ml-1 text-gray-700"><%= resturant.rating %>/5</span>
                         </div>
                     </div>
-                    <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300">Order Now</button>
-                    <a class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300" href="/resturants/<%= resturant._id %>">Details</a>
+                    <a class="margin font-bold fav" href="/resturantitems/<%= resturant._id %>" >ORDER NOW</a>
+                    <a class="margin font-bold fav" href="/resturants/<%= resturant._id %>">Details</a>
                 </div>
             </li>
         <% }) %>

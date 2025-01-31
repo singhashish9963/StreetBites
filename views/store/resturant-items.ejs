@@ -1,0 +1,74 @@
+<%- include('../partials/head') %>
+</head>
+<body>
+    <%- include('../partials/header') %>
+
+    <main class="mt-24 container mx-auto px-4">
+        <h2 class="text-5xl font-bold text-gray-800 text-center margin my-10 animate-fade-in">
+           List of items of <%= resturant.housename %>
+        </h2>
+        <div class="bg-white rounded-xl   shadow-md overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 max-w-4xl mx-auto">
+            <img src="<%= resturant.photo %>" alt="<%= resturant.housename %>" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="text-3xl font-semibold text-gray-800 mb-4">Menu</h3>
+                <ul class="space-y-4 itemsarr">
+                    <li class="flex justify-between items-center">
+                        <div class="flex items-center itemheight">
+                            <img src="https://images7.alphacoders.com/596/596343.jpg" alt="Pizza" class="imageforitem object-cover rounded-lg mr-4">
+                            <div>
+                            <span class="text-xl font-semibold text-gray-800">Pizza</span>
+                            <div class="text-gray-600">Price: $5.99</div>
+                            <div class="text-yellow-500">Rating: ★★★★☆</div>
+                        </div>
+                        </div>
+                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300">Add to Bucket</button>
+                    </li>
+                    <li class="flex justify-between items-center itemheight">
+                        <div class="flex items-center">
+                            <img src="/images/burger.jpg" alt="Burger" class="imageforitem object-cover rounded-lg mr-4">
+                            <div>
+                                <span class="text-xl font-semibold text-gray-800">Burger</span>
+                                <div class="text-gray-600">Price: $5.99</div>
+                                <div class="text-yellow-500">Rating: ★★★★☆</div>
+                            </div>
+                        </div>
+                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300">Add to Bucket</button>
+                    </li>
+                    <li class="flex justify-between items-center itemheight">
+                        <div class="flex items-center">
+                            <img src="/images/pasta.jpg" alt="Pasta" class="imageforitem object-cover rounded-lg mr-4">
+                            <div>
+                                <span class="text-xl font-semibold text-gray-800">Pasta</span>
+                                <div class="text-gray-600">Price: $5.99</div>
+                                <div class="text-yellow-500">Rating: ★★★★☆</div>
+                            </div>
+                            
+                        </div>
+                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300">Add to Bucket</button>
+                    </li>
+                    <li class="flex justify-between items-center itemheight">
+                        <div class="flex items-center">
+                            <img src="/images/salad.jpg" alt="Salad" class="imageforitem object-cover rounded-lg mr-4">
+                            <div>
+                                <span class="text-xl font-semibold text-gray-800">Salet</span>
+                                <div class="text-gray-600">Price: $5.99</div>
+                                <div class="text-yellow-500">Rating: ★★★★☆</div>
+                            </div>
+                        </div>
+                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300">Add to Bucket</button>
+                    </li>
+                    <li class="flex justify-between items-center itemheight">
+                        <div class="flex items-center">
+                            <img src="/images/sushi.jpg" alt="Sushi" class="imageforitem object-cover rounded-lg mr-4">
+                            <div>
+                                <span class="text-xl font-semibold text-gray-800">Sushi</span>
+                                <div class="text-gray-600">Price: $5.99</div>
+                                <div class="text-yellow-500">Rating: ★★★★★</div>
+                            </div>
+                        </div>
+                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300">Add to Bucket</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>

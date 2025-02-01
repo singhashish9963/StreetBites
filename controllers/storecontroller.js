@@ -16,9 +16,9 @@ exports.getindex=(req,res,next)=>{
     })  
 }
 
-exports.getbookings=(req,res,next)=>{
-   res.render("store/booking",{
-    pagetitle:"my booking"
+exports.getbuckets=(req,res,next)=>{
+   res.render("store/bucket",{
+    pagetitle:"my bucket"
    })  
 }
 exports.getfavouritelist=(req,res,next)=>{

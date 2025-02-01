@@ -1,0 +1,56 @@
+<%- include('../partials/head') %>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <main class="container mx-auto mt-20 text-center">
+        <h2 class="text-6xl font-bold text-red-500 mb-8 ">MY BUCKET</h2>
+        <% if (bucket.length > 0) { %>
+            <ul class="text-2xl text-gray-700 mb-8 space-y-4 bucketitem">
+                <% let total = 0; %>
+                <% bucket.forEach(function(item) { %>
+                    <% total += parseFloat(item.price.replace('$', '')); %>
+                    <li class=" bucketitem  items-center bg-white shadow-md rounded-lg p-4">
+                        <div class="flex1">
+                            <img src="<%= item.photo %>" alt="<%= item.name %>" class="imageforitem object-cover rounded-lg mr-4 w-20 h-20">
+                            <div>
+                                <span class="text-xl font-semibold text-gray-800"><%= item.name %></span>
+                                <div class="text-gray-600">Price: <%= item.price %></div>
+                            </div>
+                        </div>
+                       
+                    </li>
+                <% }); %>
+            </ul>
+            <div class="">
+              <div class="bag-details-container">
+                <div class="price-header">PRICE DETAILS  </div>
+                <div class="price-item">
+                  <span class="price-item-tag">Total MRP</span>
+                  <span class="price-item-value">Total: $<%= total.toFixed(2) %></span>
+                </div>
+                <div class="price-item">
+                  <span class="price-item-tag">Discount on MRP</span>
+                  <span class="price-item-value priceDetail-base-discount">-₹2.1</span>
+                </div>
+                <div class="price-item">
+                  <span class="price-item-tag">Convenience Fee</span>
+                  <span class="price-item-value">0.99</span>
+                </div>
+                <hr>
+                <div class="price-footer">
+                  <span class="price-item-tag">Total Amount</span>
+                  <span class="price-item-value text-2xl text-gray-700 mb-8"><%= (total.toFixed(2)-2.1+0.99) %></span>
+                </div>
+              </div>
+              
+            
+            </div>
+            <form action="/order-now" method="POST">
+                <button type="submit" class="bg-green-500 text-white py-2 px-6 rounded-lg hover:bg-green-600 transition duration-300">Order Now</button>
+            </form>
+        <% } else { %>
+            <p class="text-2xl text-gray-700 mb-8">Your bucket is empty.</p>
+        <% } %>
+    </main>
+</body>
+</html>

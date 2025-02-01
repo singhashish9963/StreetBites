@@ -16,12 +16,12 @@
                         <div class="flex items-center itemheight">
                             <img src="https://images7.alphacoders.com/596/596343.jpg" alt="Pizza" class="imageforitem object-cover rounded-lg mr-4">
                             <div>
-                            <span class="text-xl font-semibold text-gray-800">Pizza</span>
-                            <div class="text-gray-600">Price: $5.99</div>
-                            <div class="text-yellow-500">Rating: ★★★★☆</div>
+                                <span class="text-xl font-semibold text-gray-800">Pizza</span>
+                                <div class="text-gray-600">Price: $5.99</div>
+                                <div class="text-yellow-500">Rating: ★★★★☆</div>
+                            </div>
                         </div>
-                        </div>
-                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300">Add to Bucket</button>
+                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300 addToBucket"data-item='{"name": "pizza", "price": "5.99", "rating": "★★★★☆","photo":"https://images7.alphacoders.com/596/596343.jpg"}'>Add to Bucket</button>
                     </li>
                     <li class="flex justify-between items-center itemheight">
                         <div class="flex items-center">
@@ -32,7 +32,7 @@
                                 <div class="text-yellow-500">Rating: ★★★★☆</div>
                             </div>
                         </div>
-                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300">Add to Bucket</button>
+                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300 addToBucket" data-item='{"name": "Burger", "price": "5.99", "rating": "★★★★☆","photo":"https://images7.alphacoders.com/596/596343.jpg"}'>Add to Bucket</button>
                     </li>
                     <li class="flex justify-between items-center itemheight">
                         <div class="flex items-center">
@@ -42,20 +42,19 @@
                                 <div class="text-gray-600">Price: $5.99</div>
                                 <div class="text-yellow-500">Rating: ★★★★☆</div>
                             </div>
-                            
                         </div>
-                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300">Add to Bucket</button>
+                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300 addToBucket" data-item='{"name": "pasta", "price": "5.99", "rating": "★★★★☆","photo":"https://images7.alphacoders.com/596/596343.jpg"}'>Add to Bucket</button>
                     </li>
                     <li class="flex justify-between items-center itemheight">
                         <div class="flex items-center">
                             <img src="/images/salad.jpg" alt="Salad" class="imageforitem object-cover rounded-lg mr-4">
                             <div>
-                                <span class="text-xl font-semibold text-gray-800">Salet</span>
+                                <span class="text-xl font-semibold text-gray-800">Salad</span>
                                 <div class="text-gray-600">Price: $5.99</div>
                                 <div class="text-yellow-500">Rating: ★★★★☆</div>
                             </div>
                         </div>
-                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300">Add to Bucket</button>
+                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300 addToBucket" data-item='{"name": "slad", "price": "5.99", "rating": "★★★★☆","photo":"https://images7.alphacoders.com/596/596343.jpg"}'>Add to Bucket</button>
                     </li>
                     <li class="flex justify-between items-center itemheight">
                         <div class="flex items-center">
@@ -66,9 +65,33 @@
                                 <div class="text-yellow-500">Rating: ★★★★★</div>
                             </div>
                         </div>
-                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300">Add to Bucket</button>
+                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300 addToBucket" data-item='{"name": "sushi", "price": "5.99", "rating": "★★★★☆","photo":"https://images7.alphacoders.com/596/596343.jpg"}'>Add to Bucket</button>
                     </li>
                 </ul>
+                
             </div>
         </div>
     </main>
+    <script>
+       document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.addToBucket').forEach(button => {
+        button.addEventListener('click', function() {
+            const item = JSON.parse(this.getAttribute('data-item')); 
+            // Debugging line
+            fetch('/add-to-bucket', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ item })
+            }).then(response => {
+                if (response.ok) {
+                    window.location.href = '/bucket';
+                }
+            });
+        });
+    });
+});
+    </script>
+    </body>
+    </html>

@@ -9,7 +9,7 @@ const {getresturants}=require("../controllers/storecontroller")
 const userrouter=express.Router()
 
 
-userrouter.get("/",getindex)
+userrouter.get("/first",getindex)
 // userrouter.get("/buckets",getbuckets)
 userrouter.get("/favourites",getfavouritelist)
 userrouter.get("/index",getresturants)

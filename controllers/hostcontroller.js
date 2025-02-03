@@ -26,16 +26,16 @@ exports.gethostresturants=(req,res,next)=>{
 exports.postaddresturant=(req,res,next)=>{
     
     const editing=req.query.editing ==='true';
-    const {housename,price,location,rating,photo,description}=req.body
-    const resturant=new Resturant(housename,price,location,rating,photo,description)
+    const {resturantname,price,location,rating,photo,description}=req.body
+    const resturant=new Resturant(resturantname,price,location,rating,photo,description)
     resturant.save().then(()=>{
         console.log("resturant added ")
     })
     res.render('host/resturantadded',{pagetitle:'resturantadded',editing:editing})
 }
 exports.posteditresturant=(req,res,next)=>{
-    const {housename,price,location,rating,photo,description}=req.body
-    const resturant=new Resturant(housename,price,location,rating,photo,description)
+    const {resturantname,price,location,rating,photo,description}=req.body
+    const resturant=new Resturant(resturantname,price,location,rating,photo,description)
     resturant.save().then(result=>{
         console.log('resturant updated'.result)
     })

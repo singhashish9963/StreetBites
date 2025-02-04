@@ -4,5 +4,11 @@
     "name": "john",
     "email": "john@gmail.com",
     "password": "$2b$10$RnDx6kEw4mKGdGbj3Av1muKx1Qmihd.OD/lfYoQY0yq8zJSTKJclS"
+  },
+  {
+    "id": "1738609926399",
+    "name": "Harshvardhan Singh Chauhan",
+    "email": "harshvardhanchauhan719@gmail.com",
+    "password": "$2b$10$3qLyMqTqiMPpPTYoqorp4OMYm/fMyhlX7YkyjcwHanWpZc7ZciK8q"
   }
 ]

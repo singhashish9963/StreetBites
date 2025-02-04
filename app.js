@@ -43,6 +43,13 @@ const methodOverride = require("method-override")
 
 const users=loadUsersFromFile()
 
+
+const resturantsFilePath = path.join(__dirname, 'resturants.json');
+function saveResturantsToFile(resturants) {
+    fs.writeFileSync(resturantsFilePath, JSON.stringify(resturants, null, 2));
+}
+
+
 initializePassport(
     passport,
     email => users.find(user => user.email === email),
@@ -106,6 +113,18 @@ app.get('/register', checkNotAuthenticated, (req, res) => {
 app.get('/profile', checkAuthenticated, (req, res) => {
     res.render('store/profile', { user: req.user });
 });
+app.post('/profile', checkAuthenticated, (req, res) => {
+    const user = users.find(user => user.id === req.user.id);
+    if (user) {
+        user.name = req.body.name;
+        saveUsersToFile(users); // Save updated users to JSON file
+        req.flash('success', 'Profile updated successfully');
+    } else {
+        req.flash('error', 'User not found');
+    }
+    res.redirect('/profile');
+});
+
 // End Routes
 
 // app.delete('/logout', (req, res) => {
@@ -170,6 +189,29 @@ app.get('/bucket', (req, res) => {
     console.log({bucket})
     
 });
+function loadResturantsFromFile() {
+    if (fs.existsSync(resturantsFilePath)) {
+        const data = fs.readFileSync(resturantsFilePath);
+        return JSON.parse(data);
+    }
+    return [];
+}
+const regresturants = loadResturantsFromFile()
+app.post('/add-food-item', (req, res) => {
+    const { resturantId, foodName, foodPrice } = req.body;
+    const resturant = regresturants.find(r => r.id === resturantId);
+    if (resturant) {
+        if (!resturant.foodItems) {
+            resturant.foodItems = [];
+        }
+        resturant.foodItems.push({ name: foodName, price: foodPrice });
+        saveResturantsToFile(regresturants); // Save updated restaurants to JSON file
+        req.flash('success', 'Food item added successfully');
+    } else {
+        req.flash('error', 'Restaurant not found');
+    }
+    res.redirect('/host/host-resturant-list');
+});
 
 
 
@@ -179,7 +221,7 @@ app.use((req,res,next)=>{
 })
 
 
-const PORT=3006;
+const PORT=3004;
 mongoconnect(()=>{
     app.listen(PORT,()=>{
         console.log(`server is running on http://localhost:${PORT}`)

@@ -3,75 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>profile</title>
+    <title>Profile</title>
     
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/stylesextra.css">
     <style>
         body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
 
-.container1 {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
+        .container1 {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
 
-h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
-}
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
 
-p {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #555;
-}
+        p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #555;
+        }
 
-strong {
-    color: #333;
-}
+        strong {
+            color: #333;
+        }
 
-form {
-    margin-top: 20px;
-}
+        form {
+            margin-top: 20px;
+        }
 
-button.btn.btn-danger {
-    background-color: #d9534f;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+        button.btn.btn-danger {
+            background-color: #d9534f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-button.btn.btn-danger:hover {
-    background-color: #c9302c;
-}
+        button.btn.btn-danger:hover {
+            background-color: #c9302c;
+        }
 
+        button.btn.btn-primary {
+            background-color: #0275d8;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button.btn.btn-primary:hover {
+            background-color: #025aa5;
+        }
     </style>
-    
 </head>
 <body>
     <%- include('../partials/header') %>
     <div class="container1">
         <h1>Profile</h1>
-        <p><strong>Name:</strong> <%= user.name %></p>
-        <p><strong>Email:</strong> <%= user.email %></p>
-        <form action="/logout?_method=DELETE" method="POST">
+        <form action="/profile" method="POST">
+            <p><strong>Name:</strong> <input type="text" name="name" value="<%= user.name %>" class="form-control" /></p>
+            <p><strong>Email:</strong> <%= user.email %></p>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+        <form action="/logout?_method=DELETE" method="POST" style="margin-top: 10px;">
             <button type="submit" class="btn btn-danger">Logout</button>
         </form>
     </div>
-    
 </body>
 </html>

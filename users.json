@@ -1,7 +1,7 @@
 [
   {
     "id": "1738607498676",
-    "name": "john",
+    "name": "john  singh",
     "email": "john@gmail.com",
     "password": "$2b$10$RnDx6kEw4mKGdGbj3Av1muKx1Qmihd.OD/lfYoQY0yq8zJSTKJclS"
   },
@@ -16,5 +16,11 @@
     "name": "",
     "email": "",
     "password": "$2b$10$XwM1Sks35zn3JNfHP6TBbeF0k/ZvAyIX5Tpy7APpZiJNbvDEDZZCK"
+  },
+  {
+    "id": "1738693609691",
+    "name": "hello",
+    "email": "hello@gmail.com",
+    "password": "$2b$10$gxxkB9msdCHaaFJXn7Cn6OMCDu8P5je0Vrsj.PYMIlmNj8aPID8Rm"
   }
 ]

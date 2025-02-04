@@ -2,8 +2,8 @@
 const {getdb}=require("../utils/databaseutil")
 const {ObjectId}=require('mongodb')
 module.exports=class Resturant{
-    constructor(resturantname,price,location,rating,photo,description,_id){
-        this.resturantname=resturantname
+    constructor(housename,price,location,rating,photo,description,_id){
+        this.housename=housename
         this.price=price
         this.location=location
         this.rating=rating
@@ -17,7 +17,7 @@ module.exports=class Resturant{
         const db=getdb();
         if(this._id){
             const updatefields={
-                resturantname:this.resturantname,
+                housename:this.housename,
                 price:this.price,
                 location:this.location,
                 rating:this.rating,

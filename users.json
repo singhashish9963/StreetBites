@@ -4,5 +4,17 @@
     "name": "john",
     "email": "john@gmail.com",
     "password": "$2b$10$RnDx6kEw4mKGdGbj3Av1muKx1Qmihd.OD/lfYoQY0yq8zJSTKJclS"
+  },
+  {
+    "id": "1738690436922",
+    "name": "deep",
+    "email": "deep@gmail.com",
+    "password": "$2b$10$XyzB5nFqDqFau2gEl1kTrupHKHIOMj.cRsZ8kbjK1Ci97wBm/xQTO"
+  },
+  {
+    "id": "1738690759376",
+    "name": "",
+    "email": "",
+    "password": "$2b$10$XwM1Sks35zn3JNfHP6TBbeF0k/ZvAyIX5Tpy7APpZiJNbvDEDZZCK"
   }
 ]

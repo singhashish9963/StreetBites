@@ -179,7 +179,7 @@ app.use((req,res,next)=>{
 })
 
 
-const PORT=3006;
+const PORT=3005;
 mongoconnect(()=>{
     app.listen(PORT,()=>{
         console.log(`server is running on http://localhost:${PORT}`)

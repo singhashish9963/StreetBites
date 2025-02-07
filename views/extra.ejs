@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>first</title>
+    <title>StreetBites</title>
     
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/stylesextra.css" />
@@ -41,39 +41,19 @@
             >
           </li>
           <li>
-            <a
-              href="/index"
-              class="font-bold py-2 px-4 rounded transition duration-300"
-              >Resturants-List</a
-            >
+            <a href="/index" class="font-bold py-2 px-4 rounded transition duration-300 hover:bg-red-700 text-white">Restaurants-List</a>
           </li>
           <li>
-            <a
-              href="/favourites"
-              class="py-2 px-4 font-bold rounded transition duration-300"
-              >Favourites</a
-            >
+            <a href="/favourites" class="py-2 px-4 font-bold rounded transition duration-300 hover:bg-red-700 text-white">Favourites</a>
           </li>
           <li>
-            <a
-              href="/bucket"
-              class="py-2 px-4 font-bold rounded transition duration-300"
-              >Bucket</a
-            >
+            <a href="/bucket" class="py-2 px-4 font-bold rounded transition duration-300 hover:bg-red-700 text-white">Bucket</a>
           </li>
           <li>
-            <a
-              href="/host/host-resturant-list"
-              class="py-2 px-4 font-bold rounded transition duration-300"
-              >Host resturants</a
-            >
+            <a href="/host/host-resturant-list" class="py-2 px-4 font-bold rounded transition duration-300 hover:bg-red-700 text-white">Host Restaurants</a>
           </li>
           <li>
-            <a
-              href="/host/add-resturant"
-              class="py-2 px-4 font-bold rounded transition duration-300"
-              >Add resturants</a
-            >
+            <a href="/host/add-resturant" class="py-2 px-4 font-bold rounded transition duration-300 hover:bg-red-700 text-white">Add Restaurants</a>
           </li>
           <li>
             <a href="/profile" class="py-2 px-4 font-bold rounded transition duration-300">Profile</a>
@@ -81,5 +61,39 @@
         </ul>
       </nav>
     </header>
+
+    <!-- Quote & Button Section -->
+    <div class="container-body">
+      <div id="quote">
+        "SplitText makes it easy to break apart text in an HTML element so that each character, word, and/or line is wrapped in its own div tag."
+      </div>
+      <button id="animate">Animate</button>
+    </div>
+
+    <!-- GSAP Animation Script -->
+    <script>
+      gsap.registerPlugin(SplitText);
+
+      var tl = gsap.timeline(),
+          mySplitText = new SplitText("#quote", { type: "words,chars" }),
+          chars = mySplitText.chars; // Array of all character divs
+
+      gsap.set("#quote", { perspective: 400 });
+
+      tl.from(chars, {
+          duration: 0.8,
+          opacity: 0,
+          scale: 0,
+          y: 80,
+          rotationX: 180,
+          transformOrigin: "0% 50% -50",
+          ease: "back",
+          stagger: 0.01
+      });
+
+      document.getElementById("animate").onclick = function () {
+          tl.restart();
+      };
+    </script>
 </body>
 </html>

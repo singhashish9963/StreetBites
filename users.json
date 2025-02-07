@@ -3,6 +3,7 @@
     "id": "1738607498676",
     "name": "john  singh",
     "email": "john@gmail.com",
+<<<<<<< HEAD
     "password": "$2b$10$RnDx6kEw4mKGdGbj3Av1muKx1Qmihd.OD/lfYoQY0yq8zJSTKJclS",
     "address": "delhi"
   },
@@ -41,5 +42,20 @@
     "name": "hpe",
     "email": "jejaji@gmail.com",
     "password": "$2b$10$MYokraXlEpHJYExNo0TrWumnbgSMRLLpo4oKz40B8m08gzMXTOZwS"
+=======
+    "password": "$2b$10$RnDx6kEw4mKGdGbj3Av1muKx1Qmihd.OD/lfYoQY0yq8zJSTKJclS"
+  },
+  {
+    "id": "1738609926399",
+    "name": "Harshvardhan Singh Chauhan",
+    "email": "harshvardhanchauhan719@gmail.com",
+    "password": "$2b$10$3qLyMqTqiMPpPTYoqorp4OMYm/fMyhlX7YkyjcwHanWpZc7ZciK8q"
+  },
+  {
+    "id": "1738643015346",
+    "name": "Harshvardhan Singh Chauhan",
+    "email": "harshvardhan.20244075@mnnit.ac.in",
+    "password": "$2b$10$Hip8Dmi3xCjhyul.QDG/2OCsAfHgwTH9auULJsCPSBiCir/oTtfOC"
+>>>>>>> a82b1e3e4d9e48d8140ec0f3cff5f1507c3ee4af
   }
 ]

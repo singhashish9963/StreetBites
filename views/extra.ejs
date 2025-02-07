@@ -6,16 +6,38 @@
     <title>first</title>
     
     <link rel="stylesheet" href="/style.css" />
-   
     <link rel="stylesheet" href="/stylesextra.css" />
-    <header class="bg-red-500 text-white p-4 shadow-md">
+
+    <style>
+        body {
+            background-image: url('/components/cover1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .logo {
+          height: 4em; 
+    width: auto; 
+    vertical-align: middle; 
+    margin-right: 10px;
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-white text-black p-4 shadow-md">
       <nav class="container mx-auto flex justify-between items-center">
-        <ul class="space-x-4">
-          <li>
+        <ul class="space-x-1 flex items-center">
+          <li class="nav-item">
+            <img src="/components/logog.png" alt="StreetBites Logo" class="logo">
             <a
               href="/first"
-              class="py-2 text-3xl font-bold px-4 rounded transition duration-300"
-              >StreetBites</a
+              class="py-2 text-3xl font-bold px-4 rounded transition duration-300">
+              StreetBites</a
             >
           </li>
           <li>

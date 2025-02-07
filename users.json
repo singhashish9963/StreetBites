@@ -22,5 +22,23 @@
     "name": "hello",
     "email": "hello@gmail.com",
     "password": "$2b$10$gxxkB9msdCHaaFJXn7Cn6OMCDu8P5je0Vrsj.PYMIlmNj8aPID8Rm"
+  },
+  {
+    "id": "1738946520854",
+    "name": "Harshvardhan Singh Chauhan",
+    "email": "munni@gmailcom",
+    "password": "$2b$10$oDXvEKwfGhMuaFUoD6jurewDgF.K7TQZplc/wOBgselI/qrjpom7."
+  },
+  {
+    "id": "1738946547845",
+    "name": "munni",
+    "email": "munni@gmailcom",
+    "password": "$2b$10$jRUh0yDjne9V/7UhsBTyre1N0wCKAXDm/rnEttUFwQZjJS2etVY0W"
+  },
+  {
+    "id": "1738946967305",
+    "name": "hpe",
+    "email": "jejaji@gmail.com",
+    "password": "$2b$10$MYokraXlEpHJYExNo0TrWumnbgSMRLLpo4oKz40B8m08gzMXTOZwS"
   }
 ]

@@ -110,6 +110,7 @@ app.get('/register', checkNotAuthenticated, (req, res) => {
     res.render("register", { messages: req.flash() })
 })
 
+//profile section start
 app.get('/profile', checkAuthenticated, (req, res) => {
     res.render('store/profile', { user: req.user });
 });
@@ -119,21 +120,13 @@ app.post('/profile', checkAuthenticated, (req, res) => {
     if (user) {
         user.name = req.body.name;
         user.address=address;
-        saveUsersToFile(users); // Save updated users to JSON file
+        saveUsersToFile(users); 
         req.flash('success', 'Profile updated successfully');
     } else {
         req.flash('error', 'User not found');
     }
     res.redirect('/profile');
 });
-
-// End Routes
-
-// app.delete('/logout', (req, res) => {
-//     req.logOut()
-//     res.redirect('/login')
-//   })
-
 app.delete('/logout', (req, res) => {
     req.logOut(err => {
         if (err) {
@@ -142,6 +135,7 @@ app.delete('/logout', (req, res) => {
         res.redirect('/login');
     });
 });
+//profile section ends
 
 function checkAuthenticated(req, res, next){
     if(req.isAuthenticated()){
@@ -161,7 +155,6 @@ function checkNotAuthenticated(req, res, next){
 
 app.set('view engine','ejs')
 app.set('views','views')
-
 app.use((req,res,next)=>{
     
    next();
@@ -170,7 +163,6 @@ app.use((req,res,next)=>{
 
 
 app.use(express.urlencoded())
-
 app.use(userrouter)
 app.use(hostrouter)
 app.use(express.static(path.join(rootdir,"public")))

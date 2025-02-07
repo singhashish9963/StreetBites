@@ -1,37 +1,149 @@
 <%- include('../partials/head') %>
+<style>
+    /* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card Styling */
+.fav-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.fav-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.fav-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid #f3f4f6;
+}
+
+/* Card Content Styling */
+.fav-card-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+}
+
+/* Title and Location */
+.fav-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.fav-card-location {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 12px;
+}
+.gap{
+    gap: 50px;
+    margin: 20px;
+}
+/* Price and Rating */
+.fav-card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fav-card-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4c51bf;
+}
+
+.fav-card-rating {
+    display: flex;
+    align-items: center;
+}
+
+.fav-card-rating-text {
+    margin-left: 5px;
+    color: #777;
+    font-size: 1rem;
+}
+
+/* Remove Button */
+.fav-card-remove-btn {
+    background-color: #e53e3e;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 12px;
+    transition: background-color 0.3s;
+}
+
+.fav-card-remove-btn:hover {
+    background-color: #c53030;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .fav-card {
+        margin: 0 auto;
+    }
+}
+
+</style>
 </head>
 <body >
     <%- include('../partials/header') %>
-
-    <main class="mt-24 container mx-auto px-4">
-        <h2 class="text-5xl font-bold text-gray-800 text-center my-10 animate-fade-in">
-            Welcome to StreetBites
-        </h2>
-        <h3 class="text-3xl text-gray-700 font-semibold text-center mb-12">
-            Here are your favourites
-        </h3>
-        <div class="max-w-2xl mx-auto">
-           
-        <ul class="flex1 w-10">
+<main class="container mx-auto px-4 mt-24">
+    <h2 class="text-5xl font-bold text-gray-800 text-center my-10 animate-fade-in">
+        Welcome to StreetBites
+    </h2>
+    <h3 class="text-3xl text-gray-700 font-semibold text-center mb-12">
+        Here are your favourites
+    </h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap">
         <% favouriteresturants.forEach(resturant => { %>
-            <li class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 w-24 sm:w-1/3 md:w-1/4 p-4">
-                <img src="<%= resturant.photo %>" alt="<%= resturant.housename %>" class=" h-24 w-24 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2"><%= resturant.housename %></h3>
-                    <p class="text-gray-600 mb-2"><i class="fas fa-map-marker-alt mr-2"></i><%= resturant.location %></p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-indigo-600">₹<%= resturant.price %></span>
-                        <div class="flex items-center">
+            <div class="fav-card">
+                <img src="<%= resturant.photo %>" alt="<%= resturant.housename %>" class="fav-card-img">
+                <div class="fav-card-content">
+                    <h3 class="fav-card-title"><%= resturant.housename %></h3>
+                    <p class="fav-card-location"><i class="fas fa-map-marker-alt mr-2"></i><%= resturant.location %></p>
+                    <p class="fav-card-location"><i class="fas fa-map-marker-alt mr-2"></i><%= resturant.description %></p>
+                    <div class="fav-card-info">
+                        <span class="fav-card-price">₹<%= resturant.price %></span>
+                        <div class="fav-card-rating">
                             <i class="fas fa-star text-yellow-400"></i>
-                            <span class="ml-1 text-gray-700"><%= resturant.rating %>/5</span>
+                            <span class="fav-card-rating-text">⭐<%= resturant.rating %>/5</span>
                         </div>
                     </div>
-                    <form action="/favourites/delete/<%=resturant._id%>" method="POST"><button class="fav">remove from favourite</button></form>
+                    <form action="/favourites/delete/<%= resturant._id %>" method="POST">
+                        <button class="fav-card-remove-btn">Remove from Favourites</button>
+                    </form>
                 </div>
-            </li>
+            </div>
         <% }) %>
-        </ul>
-        </div>
-    </main>
+    </div>
+</main>
 </body>
 </html>

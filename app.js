@@ -114,9 +114,11 @@ app.get('/profile', checkAuthenticated, (req, res) => {
     res.render('store/profile', { user: req.user });
 });
 app.post('/profile', checkAuthenticated, (req, res) => {
+    const { address } = req.body;
     const user = users.find(user => user.id === req.user.id);
     if (user) {
         user.name = req.body.name;
+        user.address=address;
         saveUsersToFile(users); // Save updated users to JSON file
         req.flash('success', 'Profile updated successfully');
     } else {
@@ -184,10 +186,13 @@ app.post('/add-to-bucket', (req, res) => {
     bucket.push(item);
     res.status(200).send();
 });
+app.post('/bucket/remove', (req, res) => {
+    const itemId = req.body.itemId;
+    bucket = bucket.filter(item => item.id !== itemId);
+    res.redirect('/bucket');
+});
 app.get('/bucket', (req, res) => {
     res.render('store/bucket', { bucket:bucket,pagetitle:"my bucket" });
-    console.log({bucket})
-    
 });
 function loadResturantsFromFile() {
     if (fs.existsSync(resturantsFilePath)) {

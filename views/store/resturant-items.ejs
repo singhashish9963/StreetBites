@@ -4,7 +4,7 @@
     <%- include('../partials/header') %>
 
     <main class="mt-24 container mx-auto px-4">
-        <h2 class="text-5xl font-bold text-gray-800 text-center margin my-10 animate-fade-in">
+        <h2 class="text-5xl font-bold text-gray-800 text-center margin  my-10 animate-fade-in">
            List of items of <%= resturant.housename %>
         </h2>
         <div class="bg-white rounded-xl   shadow-md overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 max-w-4xl mx-auto">
@@ -17,55 +17,77 @@
                             <img src="https://images7.alphacoders.com/596/596343.jpg" alt="Pizza" class="imageforitem object-cover rounded-lg mr-4">
                             <div>
                                 <span class="text-xl font-semibold text-gray-800">Pizza</span>
-                                <div class="text-gray-600">Price: $5.99</div>
+                                <div class="text-gray-600">Price: ₹60</div>
                                 <div class="text-yellow-500">Rating: ★★★★☆</div>
                             </div>
                         </div>
-                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300 addToBucket"data-item='{"name": "pizza", "price": "5.99", "rating": "★★★★☆","photo":"https://images7.alphacoders.com/596/596343.jpg"}'>Add to Bucket</button>
+                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300 addToBucket"data-item='{"name": "pizza", "price": "60", "rating": "★★★★☆","photo":"https://images7.alphacoders.com/596/596343.jpg","id":"1"}'>Add to Bucket</button>
                     </li>
                     <li class="flex justify-between items-center itemheight">
                         <div class="flex items-center">
-                            <img src="/images/burger.jpg" alt="Burger" class="imageforitem object-cover rounded-lg mr-4">
+                            <img src="https://i0.wp.com/thenutritionadventure.com/wp-content/uploads/2017/07/PourHouseAmericanBurger.jpg?resize=5236%2C3490" alt="Burger" class="imageforitem object-cover rounded-lg mr-4">
                             <div>
                                 <span class="text-xl font-semibold text-gray-800">Burger</span>
-                                <div class="text-gray-600">Price: $5.99</div>
+                                <div class="text-gray-600">Price: ₹50</div>
                                 <div class="text-yellow-500">Rating: ★★★★☆</div>
                             </div>
                         </div>
-                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300 addToBucket" data-item='{"name": "Burger", "price": "5.99", "rating": "★★★★☆","photo":"https://images7.alphacoders.com/596/596343.jpg"}'>Add to Bucket</button>
+                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300 addToBucket" data-item='{"name": "Burger", "price": "50", "rating": "★★★★☆","photo":"https://i0.wp.com/thenutritionadventure.com/wp-content/uploads/2017/07/PourHouseAmericanBurger.jpg?resize=5236%2C3490","id":"2"}'>Add to Bucket</button>
                     </li>
                     <li class="flex justify-between items-center itemheight">
                         <div class="flex items-center">
-                            <img src="/images/pasta.jpg" alt="Pasta" class="imageforitem object-cover rounded-lg mr-4">
+                            <img src="https://minimalistbaker.com/wp-content/uploads/2016/01/AMAZING-Spicy-Red-Pasta-with-Lentils-and-GF-Pasta-vegan-plantbased-glutenfree-recipe-healthy-dinner.jpg" alt="Pasta" class="imageforitem object-cover rounded-lg mr-4">
                             <div>
                                 <span class="text-xl font-semibold text-gray-800">Pasta</span>
-                                <div class="text-gray-600">Price: $5.99</div>
+                                <div class="text-gray-600">Price:₹60 </div>
                                 <div class="text-yellow-500">Rating: ★★★★☆</div>
                             </div>
                         </div>
-                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300 addToBucket" data-item='{"name": "pasta", "price": "5.99", "rating": "★★★★☆","photo":"https://images7.alphacoders.com/596/596343.jpg"}'>Add to Bucket</button>
+                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300 addToBucket" data-item='{"name": "pasta", "price": "5.99", "rating": "★★★★☆","photo":"https://minimalistbaker.com/wp-content/uploads/2016/01/AMAZING-Spicy-Red-Pasta-with-Lentils-and-GF-Pasta-vegan-plantbased-glutenfree-recipe-healthy-dinner.jpg","id":"3"}'>Add to Bucket</button>
                     </li>
                     <li class="flex justify-between items-center itemheight">
                         <div class="flex items-center">
-                            <img src="/images/salad.jpg" alt="Salad" class="imageforitem object-cover rounded-lg mr-4">
+                            <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Simple-Italian-Salad_EXPS_FT20_25957_F_0624_1.jpg" alt="Salad" class="imageforitem object-cover rounded-lg mr-4">
                             <div>
                                 <span class="text-xl font-semibold text-gray-800">Salad</span>
-                                <div class="text-gray-600">Price: $5.99</div>
+                                <div class="text-gray-600">Price: ₹30</div>
                                 <div class="text-yellow-500">Rating: ★★★★☆</div>
                             </div>
                         </div>
-                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300 addToBucket" data-item='{"name": "slad", "price": "5.99", "rating": "★★★★☆","photo":"https://images7.alphacoders.com/596/596343.jpg"}'>Add to Bucket</button>
+                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300 addToBucket" data-item='{"name": "slad", "price": "30", "rating": "★★★★☆","photo":"https://www.tasteofhome.com/wp-content/uploads/2018/01/Simple-Italian-Salad_EXPS_FT20_25957_F_0624_1.jpg","id":"4"}'>Add to Bucket</button>
                     </li>
                     <li class="flex justify-between items-center itemheight">
                         <div class="flex items-center">
-                            <img src="/images/sushi.jpg" alt="Sushi" class="imageforitem object-cover rounded-lg mr-4">
+                            <img src="https://c8.alamy.com/comp/D4MKN8/closeup-image-of-sushi-sauce-and-chopstick-on-white-table-D4MKN8.jpg" alt="Sushi" class="imageforitem object-cover rounded-lg mr-4">
                             <div>
                                 <span class="text-xl font-semibold text-gray-800">Sushi</span>
-                                <div class="text-gray-600">Price: $5.99</div>
+                                <div class="text-gray-600">Price: ₹50</div>
                                 <div class="text-yellow-500">Rating: ★★★★★</div>
                             </div>
                         </div>
-                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300 addToBucket" data-item='{"name": "sushi", "price": "5.99", "rating": "★★★★☆","photo":"https://images7.alphacoders.com/596/596343.jpg"}'>Add to Bucket</button>
+                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300 addToBucket" data-item='{"name": "sushi", "price": "50", "rating": "★★★★☆","photo":"https://c8.alamy.com/comp/D4MKN8/closeup-image-of-sushi-sauce-and-chopstick-on-white-table-D4MKN8.jpg","id":"5"}'>Add to Bucket</button>
+                    </li>
+                    <li class="flex justify-between items-center itemheight">
+                        <div class="flex items-center">
+                            <img src="https://cdn.britannica.com/06/183206-050-E2A31790/Petha.jpg" alt="Sushi" class="imageforitem object-cover rounded-lg mr-4">
+                            <div>
+                                <span class="text-xl font-semibold text-gray-800">Petha</span>
+                                <div class="text-gray-600">Price: ₹65</div>
+                                <div class="text-yellow-500">Rating: ★★★★★</div>
+                            </div>
+                        </div>
+                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300 addToBucket" data-item='{"name": "Petha", "price": "65", "rating": "★★★★☆","photo":"https://cdn.britannica.com/06/183206-050-E2A31790/Petha.jpg","id":"6"}'>Add to Bucket</button>
+                    </li>
+                    <li class="flex justify-between items-center itemheight">
+                        <div class="flex items-center">
+                            <img src="https://i1.wp.com/travelwisesr.com/wp-content/uploads/2020/05/unnamed-2.jpg?resize=900%2C902&ssl=1" alt="Sushi" class="imageforitem object-cover rounded-lg mr-4">
+                            <div>
+                                <span class="text-xl font-semibold text-gray-800">malaiyo</span>
+                                <div class="text-gray-600">Price: ₹50</div>
+                                <div class="text-yellow-500">Rating: ★★★★★</div>
+                            </div>
+                        </div>
+                        <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300 addToBucket" data-item='{"name": "Malaiyo", "price": "50", "rating": "★★★★☆","photo":"https://i1.wp.com/travelwisesr.com/wp-content/uploads/2020/05/unnamed-2.jpg?resize=900%2C902&ssl=1","id":"7"}'>Add to Bucket</button>
                     </li>
                 </ul>
                 
@@ -77,6 +99,7 @@
     document.querySelectorAll('.addToBucket').forEach(button => {
         button.addEventListener('click', function() {
             const item = JSON.parse(this.getAttribute('data-item')); 
+
             // Debugging line
             fetch('/add-to-bucket', {
                 method: 'POST',
@@ -95,3 +118,4 @@
     </script>
     </body>
     </html>
+                

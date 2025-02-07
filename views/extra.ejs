@@ -8,53 +8,81 @@
     <link rel="stylesheet" href="/style.css" />
    
     <link rel="stylesheet" href="/stylesextra.css" />
-    <header class="bg-red-500 text-white p-4 shadow-md">
+    <style>
+       
+        body {
+            background-image: url('/components/cover1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .logo {
+          height: 60px; 
+    width: auto; 
+    vertical-align: middle; 
+    margin-right: 10px;
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+        }
+        .height{
+          height: 35px;
+        }
+        .container{
+          height: 50px;
+        }
+    </style>
+    </style>
+    <header class="bg-white text-black p-4 shadow-md">
       <nav class="container mx-auto flex justify-between items-center">
-        <ul class="space-x-4">
-          <li>
+        <ul class="">
+          <li class="nav-item">
+            <img src="/components/logog.png" alt="logo" class="logo">
             <a
               href="/first"
-              class="py-2 text-3xl font-bold px-4 rounded transition duration-300"
+              class="py-1 text-3xl font-bold px-2 rounded transition duration-300 text-blue-700"
               >StreetBites</a
             >
           </li>
-          <li>
+          <li class="height">
             <a
               href="/index"
-              class="font-bold py-2 px-4 rounded transition duration-300"
+              class="font-bold py-2 px-4  rounded transition duration-300"
               >Resturants-List</a
             >
           </li>
-          <li>
+          <li class="height">
             <a
               href="/favourites"
-              class="py-2 px-4 font-bold rounded transition duration-300"
+              class="py-2 px-4 font-bold height rounded transition duration-300"
               >Favourites</a
             >
           </li>
-          <li>
+          <li class="height">
             <a
               href="/bucket"
-              class="py-2 px-4 font-bold rounded transition duration-300"
+              class="py-2 px-4 font-bold height rounded transition duration-300"
               >Bucket</a
             >
           </li>
-          <li>
+          <li class="height">
             <a
               href="/host/host-resturant-list"
-              class="py-2 px-4 font-bold rounded transition duration-300"
+              class="py-2 px-4 font-bold height rounded transition duration-300"
               >Host resturants</a
             >
           </li>
-          <li>
+          <li class="height">
             <a
               href="/host/add-resturant"
-              class="py-2 px-4 font-bold rounded transition duration-300"
+              class="py-2 px-4 font-bold height rounded transition duration-300"
               >Add resturants</a
             >
           </li>
-          <li>
-            <a href="/profile" class="py-2 px-4 font-bold rounded transition duration-300">Profile</a>
+          <li class="height">
+            <a href="/profile" class="py-2 px-4 height font-bold rounded transition duration-300">Profile</a>
         </li>
         </ul>
       </nav>

@@ -22,5 +22,17 @@
     "name": "hello",
     "email": "hello@gmail.com",
     "password": "$2b$10$gxxkB9msdCHaaFJXn7Cn6OMCDu8P5je0Vrsj.PYMIlmNj8aPID8Rm"
+  },
+  {
+    "id": "1738949099158",
+    "name": "an",
+    "email": "an56@gmail.com",
+    "password": "$2b$10$K0GSqwwP4rxhzR26ZEGHZevVLDp7nQcnTcOAuTuQEL1ENao.QV3tC"
+  },
+  {
+    "id": "1738949594692",
+    "name": "ar",
+    "email": "ar45@gmail.com",
+    "password": "$2b$10$2w1rx4Hdcq54XyiAGnzaMuDIhcmEQCAvHCjpS9XTEB8e49GLhIhTe"
   }
 ]

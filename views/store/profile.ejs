@@ -82,6 +82,10 @@
         <form action="/profile" method="POST">
             <p><strong>Name:</strong> <input type="text" name="name" value="<%= user.name %>" class="form-control" /></p>
             <p><strong>Email:</strong> <%= user.email %></p>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" class="form-control" id="address" name="address" value="<%= user.address %>" placeholder="Enter your address">
+            </div>
             <button type="submit" class="btn btn-primary">Save</button>
         </form>
         <form action="/logout?_method=DELETE" method="POST" style="margin-top: 10px;">

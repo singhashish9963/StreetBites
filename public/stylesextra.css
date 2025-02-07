@@ -354,8 +354,8 @@ img {
     margin: 20px;
 }
 .imageforitem{
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     margin: 10px;
 
 }
@@ -363,6 +363,7 @@ img {
     display: flex;
     flex-direction: column;
     width: 800px;
+    gap: 30px;
     
 }
 .itemheight{
@@ -495,5 +496,5 @@ img {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 50%;
+    width: 90%;
   }
